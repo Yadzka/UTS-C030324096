@@ -21,6 +21,14 @@ cout<<"hallo saya menu "<<pesan;
 getch();
 }
 
+// Fungsi quote / sepatah kata
+void sepatahKata()
+{
+  system("cls");
+  cout << "Menu ke-4 " << endl;
+  cout << "Kode bisa dihapus, semangat jangan" << endl;
+  getch();
+}
 
 int main() {
 char pl;
@@ -43,7 +51,7 @@ do
     /* code */
     break;  
    case '4':
-    mPertama("ke- empat");
+    sepatahKata();
     /* code */
     break;  
   case '5':
@@ -52,7 +60,7 @@ do
   
   default:
     system("cls");
-    cout<<"Kode bisa dihapus, semangat jangan";
+    cout<<"Pilihan Tidak Tersedia";
     getch();
     break;
   }
