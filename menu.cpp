@@ -39,15 +39,6 @@ void inputData(int data[], int n)
   getch();
 }
 
-// Fungsi quote / sepatah kata
-void sepatahKata()
-{
-  system("cls");
-  cout << "Menu ke-4 " << endl;
-  cout << "Kode bisa dihapus, semangat jangan" << endl;
-  getch();
-}
-
 // Fungsi menampilkan data input dari user
 void tampilData(int data[], int n)
 {
@@ -63,6 +54,51 @@ void tampilData(int data[], int n)
   getch();
 }
 
+// Fungsi untuk mengurutkan dari kecil ke besar
+void ascendingSort(int data[], int n)
+{
+  int temp;
+  for (int i = 1; i < n; i++)
+  {
+    temp = data[i];
+    int j = i - 1;
+    while (j >= 0 && data[j] > temp)
+    {
+      data[j + 1] = data[j];
+      j--;
+    }
+    data[j + 1] = temp;
+  }
+}
+
+// Fungsi untuk mengurutkan dari besar ke kecil
+void descendingSort(int data[], int n)
+{
+  int temp;
+  for (int i = 1; i < n; i++)
+  {
+    temp = data[i];
+    int j = i - 1;
+    while (j >= 0 && data[j] < temp)
+    {
+      data[j + 1] = data[j];
+      j--;
+    }
+    data[j + 1] = temp;
+  }
+}
+
+// Fungsi quote / sepatah kata
+void sepatahKata()
+{
+  system("cls");
+  cout << "Menu ke-4 " << endl;
+  cout << "Kode bisa dihapus, semangat jangan" << endl;
+  getch();
+}
+
+
+// Fungsi utama
 int main()
 {
   char p;
@@ -80,7 +116,7 @@ int main()
       tampilData(d_array, MAX);
       break;
     case '3':
-
+      
       break;
     case '4':
       sepatahKata();
