@@ -48,6 +48,21 @@ void sepatahKata()
   getch();
 }
 
+// Fungsi menampilkan data input dari user
+void tampilData(int data[], int n)
+{
+  system("cls");
+  cout << "Menu ke-2" << endl;
+  cout << "Data yang dimasukkan adalah: ";
+  for (int i = 0; i < n; i++)
+  {
+    cout << data[i] << " ";
+  }
+  cout << endl;
+  cout << "Tekan tombol apapun untuk kembali ke menu utama." << endl;
+  getch();
+}
+
 int main()
 {
   char p;
@@ -62,7 +77,7 @@ int main()
       inputData(d_array, MAX);
       break;
     case '2':
-
+      tampilData(d_array, MAX);
       break;
     case '3':
 
