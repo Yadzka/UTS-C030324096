@@ -88,6 +88,59 @@ void descendingSort(int data[], int n)
   }
 }
 
+// Fungsi untuk menyimpan data dari hasil input user
+void simpanData(int arr[], int t[], int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    t[i] = arr[i];
+  }
+}
+
+// Fungsi menampilkan hasil sorting ascend dan descend
+void sort(int arr[], int n, char mode)
+{
+  if (mode == 'a')
+  {
+    ascendingSort(arr, n);
+    cout << "Ascending (Kecil ke Besar): ";
+  }
+  else if (mode == 'd')
+  {
+    descendingSort(arr, n);
+    cout << "Descending (Besar ke Kecil): ";
+  }
+  else
+  {
+    cout << "Mode tidak valid." << endl;
+    return;
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+// Fungsi untuk menampilkan hasil sorting dari data
+void sorting(int data[], int n)
+{
+  int temp[MAX];
+  system("cls");
+  cout << "Menu ke-3" << endl;
+  cout << "Hasil Pengurutan Data:" << endl;
+
+  simpanData(data, temp, n);
+  sort(temp, n, 'a');
+
+  simpanData(data, temp, n);
+  sort(temp, n, 'd');
+
+  cout << "Tekan sembarang tombol untuk kembali ke menu utama." << endl;
+  getch();
+}
+
 // Fungsi quote / sepatah kata
 void sepatahKata()
 {
@@ -116,7 +169,7 @@ int main()
       tampilData(d_array, MAX);
       break;
     case '3':
-      
+      sorting(d_array, MAX);
       break;
     case '4':
       sepatahKata();
