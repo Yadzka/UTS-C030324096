@@ -52,7 +52,7 @@ do
   
   default:
     system("cls");
-    cout<<"Pilihan Tidak Tersedia";
+    cout<<"Kode bisa dihapus, semangat jangan";
     getch();
     break;
   }
